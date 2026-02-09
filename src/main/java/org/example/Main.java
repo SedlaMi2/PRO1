@@ -9,6 +9,11 @@ public class Main {
             System.out.println("i = " + i);
             i =- 3;
             System.out.println("i = " + i);
+
+            if (i == -3) {
+                break;
+            }
         }
+        System.out.println("A tak, no ...");
     }
 }
