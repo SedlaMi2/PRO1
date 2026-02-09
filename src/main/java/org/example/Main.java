@@ -1,16 +1,20 @@
 package org.example;
 
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello and welcome!");
+import java.io.IO;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
-        for (int i = 1; i <= 5; i++) {
-            if (i % 2 == 0) {
-                System.out.println(i + " je sudé");
-            } else {
-                System.out.println(i + " je liché");
-            }
+public class Main {
+    public static void main(String[] args) throws IOException {
+        var lines = Files.readAllLines(
+                Paths.get("U:\\PRO1\\Cvičení\\cv01\\ucastnici.txt"));
+        for(var line : lines) {
+            var split = line.split(",");
+            var p = new Participant(
+                    split[0],
+                    Integer.parseInt(split[1]));
+            IO.println(p.getInfo(2026));
         }
-        System.out.println("A tak, no ...");
     }
 }
