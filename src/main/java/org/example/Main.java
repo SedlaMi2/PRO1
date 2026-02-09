@@ -5,13 +5,10 @@ public class Main {
         System.out.println("Hello and welcome!");
 
         for (int i = 1; i <= 5; i++) {
-            i =+ 2;
-            System.out.println("i = " + i);
-            i =- 3;
-            System.out.println("i = " + i);
-
-            if (i == -3) {
-                break;
+            if (i % 2 == 0) {
+                System.out.println(i + " je sudé");
+            } else {
+                System.out.println(i + " je liché");
             }
         }
         System.out.println("A tak, no ...");
